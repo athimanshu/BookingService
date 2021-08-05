@@ -1,0 +1,6 @@
+com/paypal/bfs/test/bookingserv/repository/BookingRepository.class
+com/paypal/bfs/test/bookingserv/impl/BookingResourceImpl.class
+com/paypal/bfs/test/bookingserv/model/BookingEntity.class
+com/paypal/bfs/test/bookingserv/model/AddressEntity.class
+com/paypal/bfs/test/bookingserv/convertor/DaoToEntityConvertor.class
+com/paypal/bfs/test/bookingserv/convertor/EntityToDaoConvertor.class
