@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RequestMapping("/v1/bfs/booking")
-public interface BookingResource {
+public interface BookingResources{
     /**
      * Create {@link Booking} resource
      *
@@ -17,8 +17,8 @@ public interface BookingResource {
     @PutMapping("")
     ResponseEntity<Booking> create(@RequestBody Booking booking);
 
-    @GetMapping("{id}")
-    ResponseEntity<List<Booking>> retrieve(@PathVariable("id") String id);
+    @GetMapping("")
+    ResponseEntity<List<Booking>> retrieve();
 
 
 }

@@ -1,6 +1,6 @@
 package com.paypal.bfs.test.bookingserv.impl;
 
-import com.paypal.bfs.test.bookingserv.api.BookingResource;
+import com.paypal.bfs.test.bookingserv.api.BookingResources;
 import com.paypal.bfs.test.bookingserv.api.model.Booking;
 import com.paypal.bfs.test.bookingserv.common.exception.BookingAlreadyExistException;
 import com.paypal.bfs.test.bookingserv.common.exception.BookingNotFoundException;
@@ -20,7 +20,7 @@ import java.util.Optional;
 import java.util.List;
 
 @RestController
-public class BookingResourceImpl implements BookingResource {
+public class BookingResourceImpl implements BookingResources{
 
     @Autowired
     BookingRepository bookingRepository;
@@ -45,7 +45,7 @@ public class BookingResourceImpl implements BookingResource {
     }
 
     @Override
-    public ResponseEntity<List<Booking>> retrieve(String id) {
+    public ResponseEntity<List<Booking>> retrieve() {
         Optional<List<BookingEntity>> bookingEntityList = Optional.of(bookingRepository.findAll());
 
         if(!bookingEntityList.isPresent()  || bookingEntityList.get().size()==0){
